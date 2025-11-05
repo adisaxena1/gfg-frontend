@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GFG-RKGIT • Team</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="light-mode">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="GFG RKGIT" class="logo" onerror="this.style.display='none'">
+        <span class="brand-text">GFG-RKGIT</span>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleTeam" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <a href="index.html#contact" class="btn btn-primary">Join</a>
+        <button class="nav-toggle" id="navToggleTeam" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section team container" data-aos="fade-up">
+      <div class="section-head">
+        <h2>Core Team — 2025</h2>
+        <p>Leads and coordinators driving the community.</p>
+      </div>
+
+      <div class="team-grid large">
+        <!-- A grid of members; hover lifts + sliding entrance -->
+        <article id="aditya" class="member-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="member-photo" style="background-image: linear-gradient(180deg,#5ccc78,#48b86a)"></div>
+          <h4>Aditya Saxena</h4>
+          <p>Frontend Lead</p>
+          <div class="member-links">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="GitHub">GitHub</a>
+          </div>
+        </article>
+
+        <article id="member2" class="member-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="member-photo"></div>
+          <h4>Member Two</h4>
+          <p>Workshop Coordinator</p>
+          <div class="member-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+          </div>
+        </article>
+
+        <article id="member3" class="member-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="member-photo"></div>
+          <h4>Member Three</h4>
+          <p>CP Lead</p>
+          <div class="member-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+          </div>
+        </article>
+
+        <article class="member-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="member-photo"></div>
+          <h4>Member Four</h4>
+          <p>Design Lead</p>
+          <div class="member-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year2"></span> GFG-RKGIT • Designed by Aditya Saxena</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
