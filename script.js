@@ -88,3 +88,13 @@ if (laptop3d) {
     laptop.style.transform = `rotateX(0deg) rotateY(0deg)`;
   });
 }
+// Initialize AOS animations
+AOS.init({
+  duration: 900,
+  once: true,
+  easing: "ease-out-cubic",
+});
+// Slight scroll delay for smoother 2D animations
+window.addEventListener("scroll", () => {
+  document.body.style.setProperty("--scrollY", window.scrollY + "px");
+});
