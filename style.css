@@ -264,3 +264,240 @@ body.dark-mode .hero-socials .social {
   --social-bg: rgba(255, 255, 255, 0.1);
   --social-color: #ffffff;
 }
+/* =======================
+   Story Sections
+======================= */
+.story-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.story-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+.story-section p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* WHO WE ARE */
+.who-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.who-photo img {
+  justify-items: center;
+  width: 1250px;
+  
+  border-radius:12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* ACTIVITIES */
+.activity-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+  text-align: left;
+  gap: 30px;
+}
+
+.activity-photo img {
+  width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.activity-text h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* ACHIEVEMENTS */
+.achievements {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ach-card {
+  background: var(--secondary);
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(15, 24, 41, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ach-card:hover {
+  transform: translateY(-8px);
+}
+
+.ach-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* TEAM PREVIEW */
+.team-preview {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.team-card {
+  width: 200px;
+  background: var(--secondary);
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .who-content,
+  .activity-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .who-photo img,
+  .activity-photo img {
+    width: 100%;
+  }
+}
+/* ============================
+   2D ANIMATED DECOR ELEMENTS
+============================ */
+
+/* General positioning */
+.floating-elements,
+.animated-icons,
+.glow-dots,
+.bouncing-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* WHO WE ARE Floating Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(92, 204, 120, 0.2);
+  animation: floatUp 8s ease-in-out infinite;
+}
+
+.orb1 { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
+.orb2 { width: 100px; height: 100px; top: 60%; left: 75%; animation-delay: 2s; }
+.orb3 { width: 60px; height: 60px; top: 40%; left: 45%; animation-delay: 1s; }
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-20px); opacity: 1; }
+}
+
+/* ACTIVITIES Rotating Icons */
+.animated-icons .icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  opacity: 0.15;
+  border-radius: 10px;
+  animation: rotateIcon 10s linear infinite;
+}
+
+.icon.code { top: 10%; left: 15%; }
+.icon.gear { top: 50%; left: 80%; animation-delay: 3s; }
+.icon.bolt { top: 75%; left: 40%; animation-delay: 5s; }
+
+@keyframes rotateIcon {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ACHIEVEMENTS Glowing Dots */
+.glow-dots .dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.dot:nth-child(1) { top: 30%; left: 20%; animation-delay: 0s; }
+.dot:nth-child(2) { top: 60%; left: 70%; animation-delay: 1s; }
+.dot:nth-child(3) { top: 45%; left: 50%; animation-delay: 2s; }
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.4); }
+}
+
+/* TEAM Bouncing Shapes */
+.bouncing-shapes .shape {
+  position: absolute;
+  opacity: 0.2;
+  animation: bounceShape 6s ease-in-out infinite;
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid var(--primary);
+  top: 20%; left: 25%;
+}
+
+.shape.square {
+  width: 18px; height: 18px;
+  background: var(--primary);
+  top: 60%; left: 80%;
+  animation-delay: 1s;
+}
+
+.shape.circle {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  top: 45%; left: 40%;
+  animation-delay: 2s;
+}
+
+@keyframes bounceShape {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
